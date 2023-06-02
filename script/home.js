@@ -58,7 +58,7 @@ function showContact(){
 function hideList (){
     document.getElementById('list').style.animation= 'hide 0.8s ease-out';
     setTimeout(()=>{document.getElementById('list').style.opacity='0';}, 800);
-    setTimeout(()=>{document.getElementById('list').style.zIndex='0';}, 800);
+    setTimeout(()=>{document.getElementById('list').style.zIndex='-2';}, 800);
 
     closeBt.style.display = 'none';
     seriesBt.style.fontWeight = '300';
@@ -69,7 +69,7 @@ function hideList (){
 function hideContact () {
     document.getElementById('contact').style.animation= 'hide 0.8s ease-out';
     setTimeout(()=>{document.getElementById('contact').style.opacity='0';}, 800);
-    setTimeout(()=>{document.getElementById('contact').style.zIndex='0';}, 800);
+    setTimeout(()=>{document.getElementById('contact').style.zIndex='-2';}, 800);
 
     closeBt.style.display = 'none';
     contactBt.style.fontWeight = '300';

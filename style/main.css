@@ -12,6 +12,8 @@
     --milky:  #e5dede;
 }
 body {
+    width: 100vw;
+    overflow-x: hidden;
     background-color: black;
     overflow: scroll;
 }
@@ -49,12 +51,10 @@ p {
 footer{
     bottom: 0;
     position: fixed;
-    width: 100%;
 }
 .footer {
     height: 60px;
     margin: auto;
-    width: 100%;
     text-align:center;
     /* padding:10px; */
     color: var(--milky);
@@ -117,10 +117,10 @@ p {
     color: #00acee;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .site-title {
         position: relative;
-        width: 100%;
+        /* width: 100%; */
         text-align: left;
         font-size: 20px;
         line-height: 20px;
