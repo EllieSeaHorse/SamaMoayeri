@@ -1,0 +1,134 @@
+* {
+    font-family:  'Khula', Arial, sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+:root {
+    --blue: #93aac2;
+    --lighter-blue: #c3d5e9;
+    --red:  #732929;
+    --lighter-red:  #c08c8c;
+    --dark-grey:  #131313;
+    --milky:  #e5dede;
+}
+body {
+    background-color: black;
+    overflow: scroll;
+}
+nav {
+    line-height: 20px;
+    /* padding: 4%; */
+
+}
+.site-title {
+    position: fixed;
+    text-align: left;
+    font-size: 30px;
+    line-height: 30px;
+    left:30px;
+    top: 30px;
+    z-index: 10;
+
+}
+#name h3{
+    font-weight: 300;
+}
+
+
+/* .tab {
+    display: inline-block;
+    margin-left: 30px;
+} */
+
+
+p {
+    font-size: 14px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.footer {
+    height: 60px;
+    margin: auto;
+    width: 100%;
+    text-align:center;
+    /* padding:10px; */
+    color: var(--milky);
+}
+footer a{
+    filter: drop-shadow(1px 1px 2px #000000);
+    font-size: 14px;
+    /* padding: 0px 5px; */
+    color: var(--milky)
+}
+footer a:hover {
+    /* background-color:rgb(115, 41, 41); */
+    color: rgb(191, 208, 213);
+}
+a:visited{
+    color: rgb(216, 216, 216);
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--milky)
+}
+
+a:hover{
+    color: rgb(222, 222, 222);
+}
+a:active {
+    color: lightsteelblue;
+} 
+p {
+    color: var(--milky);
+}
+
+
+
+#whatsapp:active, #whatsapp:hover {
+    color: #25D366;
+}
+#instagram:active, #instagram:hover {
+    background: -webkit-linear-gradient(50deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#facebook:active, #facebook:hover {
+    color:#3b5998 ;
+}
+#linkedin:active,#linkedin:hover {
+   color: #0072b1 ;
+}
+#mail:active, #mail:hover {
+    color: #BB001B;
+}
+#phone:active,#phone:hover {
+    color: darkkhaki;
+}
+#telegram:active, #telegram:hover {
+    color: #0088cc;
+}
+#twitter:active, #twitter:hover {
+    color: #00acee;
+}
+
+@media screen and (max-width: 700px) {
+    .site-title {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        line-height: 20px;
+        left:20px;
+        top: 20px;
+        z-index: 10;
+        padding-bottom: 50px;
+
+    }
+}
+
