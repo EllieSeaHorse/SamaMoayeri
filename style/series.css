@@ -7,19 +7,18 @@
     --dark-grey:  #131313;
     --milky:  #e5dede;
 }
-body {
-    display: block;
-    width: 100%;
-}
+
 .statement {
     font-size: 3.5vh;
-    position: fixed;
+    align-self: self-end;
+    /* position: fixed;
     bottom: 30px;
-    left: 30px;
+    left: 30px; */
+    grid-area: text;
     font-weight: 300;
     text-align: left;
     z-index: 3;
-    width: 33%;
+    /* width: 33%; */
     /* border-bottom: 1px solid var(--milky); */
     /* border-right: 1px solid var(--milky); */
 }
@@ -33,24 +32,24 @@ body {
 
 .photos {
     /* background-color: var(--milky); */
+    grid-area: content;
+    overflow: scroll;
     display: grid;
-    gap: 3px;
+
+    column-gap: 3px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: fit-content;
     justify-content: start;
     align-content: start;
     flex-wrap: wrap;
-    position: fixed;
+    /* position: fixed;
     top: 30px;
     right: 30px;
     width: 60%;
     height: 76%;
-    overflow: scroll;
+    overflow: scroll; */
 }
-.photos img {
-    flex: 30%;
 
-}
 .video {
     position: fixed;
     height: 100%;
@@ -72,14 +71,16 @@ img:hover {
 
 }
 .next {
-    position: fixed;
+    border: 1px solid salmon;
+    grid-area: next;
+    /* position: fixed; */
     font-size: 0.8em;
-    bottom: 30px;
+    /* bottom: 30px;
     right: 30px;
-    width: 60%;
+    width: 60%; */
     display: flex;
     justify-content: space-between;
-    align-self: end;
+    /* align-self: end; */
     color: var(--milky);
 }
 #next, #pre {
@@ -95,7 +96,7 @@ img:hover {
 
 
 @media screen and (max-width: 600px) {
-
+/* 
     .statement {
         position: relative;
         /* width: 92%;
@@ -103,7 +104,7 @@ img:hover {
         right: 4%;
         left: 4%;
         bottom: auto;
-        padding-bottom: 30px; */
+        padding-bottom: 30px; 
         width: auto;
         right: 0px;
         top: auto;
@@ -119,9 +120,7 @@ img:hover {
     .statement p {
         font-size: 0.6em;
         padding: 0;
-    
-        /* padding: 0px 15px 15px 0 ; */
-    }
+        }
     .photos {
         position: relative;
 
@@ -163,6 +162,6 @@ img:hover {
     .photos  {
         grid-template-columns: 1fr;
 
-    }
+    } */
 
 }

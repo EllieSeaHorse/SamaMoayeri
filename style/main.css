@@ -3,6 +3,12 @@
     font-weight: 300;
     margin: 0;
 }
+html, body {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  }
 :root {
     --blue: #93aac2;
     --lighter-blue: #c3d5e9;
@@ -17,18 +23,35 @@ body {
     background-color: black;
     overflow: scroll;
 }
+main {
+    position: relative;
+    display: grid;
+    width: 92%;
+    height: 90%;
+    padding: 4%;
+    /* height: 700px; */
+    /* height: 9vh; */
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: 100px 100px 100px 100px; */
+
+    grid-template-rows: 10% 85% 5%;
+    grid-template-areas: "title content"
+                        "text content"
+                        "text next";
+}
 nav {
     line-height: 20px;
     /* padding: 4%; */
 
 }
 .site-title {
-    position: fixed;
+    /* position: fixed;
     text-align: left;
     font-size: 30px;
     line-height: 30px;
     left:30px;
-    top: 30px;
+    top: 30px; */
+    grid-area: title;
     z-index: 10;
 
 }
