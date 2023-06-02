@@ -134,7 +134,7 @@
 #close:hover {
     cursor: pointer;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
     #list, #contact {
         filter: drop-shadow(1px 1px 2px #000000);
 
