@@ -57,11 +57,6 @@ body {
     font-weight: 300;
 }
 
-/* .tab {
-    display: inline-block;
-    margin-left: 30px;
-} */
-
 p {
     font-size: 14px;
     text-align: justify;
@@ -75,13 +70,11 @@ footer{
     height: 60px;
     margin: auto;
     text-align:center;
-    /* padding:10px; */
     color: var(--milky);
 }
 footer a{
     filter: drop-shadow(1px 1px 2px #000000);
     font-size: 14px;
-    /* padding: 0px 5px; */
     color: var(--milky)
 }
 footer a:hover {
