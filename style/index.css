@@ -27,21 +27,44 @@
     100% {right: 0;}
 
 }
+#home-main {
+    position: relative;
+    display: grid;
+    width: 92%;
+    height: 90%;
+    padding: 4%;
+    /* height: 700px; */
+    /* height: 9vh; */
+    column-gap: 20px;
 
+    grid-template-columns: 3fr 2fr;
+    /* grid-template-rows: 100px 100px 100px 100px; */
 
+    /* grid-template-rows: 10% 85% 5%; */
+    grid-template-areas: "title em"
+                        "text content"
+                        "text content";
+ 
+}
+.site-title {
 
-/* #home-page  {
-    background-color: black;
-    overflow: hidden;
-} */
+    font-size: 30px;
+    line-height: 30px; 
+
+    grid-area: title;
+    z-index: 10;
+
+}
 
 .toolbar {
+    grid-area: text;
+    align-self: self-end;
 
     font-size: 1.7em;
     line-height: 1em;
-    position: fixed;
+    /* position: fixed;
     bottom: 30px;
-    left: 30px;
+    left: 30px; */
     text-align: left;
     /* display: block; */
     text-transform: uppercase;
@@ -53,15 +76,18 @@
 
 #list, #contact {
     /* display: none; */
+    grid-area: content;
+    align-self: self-end;
+
     font-size: 1.5em;
     line-height: 1em;
-    position: fixed;
+    /* position: fixed;
     bottom: 30px;
-    right: 4%;
+    right: 4%; */
     font-weight: 300;
     text-align: left;
     z-index: -2;
-    width: 40%;
+    /* width: 40%; */
     border-bottom: 1px solid var(--milky);
     border-right: 1px solid var(--milky);
     /* height: 0; */
@@ -101,12 +127,8 @@
         opacity: 1;
 
       }
-    
 }
-
 @keyframes hide {
-    /* 0% {right: 30px;}
-    100% {right: -100%;} */
     from {
         transform: translate3d(0, 0, 0);
         opacity: 1;
@@ -118,15 +140,10 @@
       }
 }
 
-
 #close {
+    grid-area: em;
     display: none;
-    position: fixed;
-    right: 30px;
-    top: 30px;
-    color:var(--milky);
-    width: 30px;
-    height: 30px;
+    color:var(--milky);s
     z-index: 10 ;
     text-align: right;
 }
@@ -135,12 +152,42 @@
     cursor: pointer;
 }
 @media screen and (max-width: 600px) {
+    #home-main {
+
+        width: 88%;
+        height: fit-content;
+        padding: 6%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+                            "text"
+                            "content"
+    }
+    #close {
+        grid-area: title;
+    }
+    #bpImage{
+        display: none;
+    }
+    #bpImage2 {
+        display: block;
+        position: fixed;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+    }
+    #list, #contact, .toolbar, .site-title { 
+        padding-bottom: 20px;
+    }
+}
+
+/* }
+@media screen and (max-width: 600px) {
     #list, #contact {
         filter: drop-shadow(1px 1px 2px #000000);
 
         /* position: relative; */
         /* display: none; */
-        /* display: none; */
+        /* display: none; 
         font-size: 1em;
         line-height: 1.1em;
         width: auto;
@@ -161,7 +208,7 @@
     
     }
     .toolbar {
-        /* background-color: black; */
+        /* background-color: black; 
         text-align: right;
 
         position: relative;
@@ -193,5 +240,5 @@
         top: 20px;
     }
 
-}
+} */
 

@@ -7,7 +7,32 @@
     --dark-grey:  #131313;
     --milky:  #e5dede;
 }
+.site-title {
 
+    font-size: 30px;
+    line-height: 30px; 
+
+    grid-area: title;
+    z-index: 10;
+
+}
+main {
+    position: relative;
+    display: grid;
+    width: 92%;
+    height: 90%;
+    padding: 4%;
+    /* height: 700px; */
+    /* height: 9vh; */
+    column-gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: 100px 100px 100px 100px; */
+
+    grid-template-rows: 10% 85% 5%;
+    grid-template-areas: "title content"
+                        "text content"
+                        "text next";
+}
 .statement {
     font-size: 3.5vh;
     align-self: self-end;
@@ -25,7 +50,6 @@
 .statement p {
     font-size: 0.6em;
     margin: 0 auto;
-    padding: 0 30px 0 0;
 
     /* padding: 0px 15px 15px 0 ; */
 }
@@ -33,13 +57,15 @@
 .photos {
     /* background-color: var(--milky); */
     grid-area: content;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     display: grid;
 
     column-gap: 3px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: fit-content;
-    justify-content: start;
+    /* justify-content: start; */
     align-content: start;
     flex-wrap: wrap;
     /* position: fixed;
@@ -58,33 +84,28 @@
 video {
     width: 100%;
     object-fit: contain;
-
 }
 img {
     padding: 2px;
     width: 100%;
     object-fit: contain;
-    /* border: 1px solid var(--milky); */
 }
-img:hover {
-    /* filter: drop-shadow(1px 1px 3px rgb(87, 87, 87)); */
+.big {
+    grid-row: span 2;
+    grid-column:  span 2;
+}
 
-}
 .next {
-    border: 1px solid salmon;
     grid-area: next;
-    /* position: fixed; */
-    font-size: 0.8em;
-    /* bottom: 30px;
-    right: 30px;
-    width: 60%; */
+    font-size: 0.6em;
     display: flex;
     justify-content: space-between;
-    /* align-self: end; */
     color: var(--milky);
+
 }
 #next, #pre {
     text-transform: uppercase;
+    align-self: self-end;
 }
 
 #trep {
@@ -94,74 +115,39 @@ img:hover {
     background-color: rgb(17, 17, 17);
 }
 
-
 @media screen and (max-width: 600px) {
-/* 
-    .statement {
-        position: relative;
-        /* width: 92%;
-        top:auto;
-        right: 4%;
-        left: 4%;
-        bottom: auto;
-        padding-bottom: 30px; 
-        width: auto;
-        right: 0px;
-        top: auto;
-        bottom: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        left: 0px;
-        margin-right: 20px;
-        margin-left: 20px;
+    main {
 
-
+        width: 88%;
+        height: fit-content;
+        padding: 6%;
+        /* height: 700px; */
+        /* height: 9vh; */
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 100px 100px 100px 100px; */
+    
+        /* grid-template-rows: 10% 85% 5%; */
+        grid-template-areas: "title"
+                            "text"
+                            "content"
+                            "next";
     }
-    .statement p {
-        font-size: 0.6em;
-        padding: 0;
-        }
     .photos {
-        position: relative;
-
+        /* background-color: var(--milky); */
         grid-template-columns: 1fr 1fr;
-
-        width: auto;
-        right: 0px;
-        top: auto;
-        bottom: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        left: 0px;
-        margin-right: 20px;
-        margin-left: 20px;
-
     }
-    .photos img {
-        padding: 10px;
-        flex: 40%;
-    }
-    .next {
-
-        position: relative;
-        
-
-        width: auto;
-        right: 0px;
-        top: auto;
-        bottom: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        left: 0px;
-        margin-right: 20px;
-
-        margin-left: 20px;
+    .photos, .statement, .next, .site-title {
+        padding-bottom: 20px;
     }
 }
-@media screen and (max-width: 350px) {
-    .photos  {
+@media screen and (max-width: 400px) {
+
+    .photos {
+        /* background-color: var(--milky); */
         grid-template-columns: 1fr;
-
-    } */
-
+    }
+    .big {
+        grid-row: span 1;
+        grid-column:  span 1;
+    }
 }
