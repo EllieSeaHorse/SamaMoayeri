@@ -143,7 +143,7 @@
 #close {
     grid-area: em;
     display: none;
-    color:var(--milky);s
+    color:var(--milky);
     z-index: 10 ;
     text-align: right;
 }
@@ -174,9 +174,13 @@
         height: 100vh;
         bottom: 0;
         right: 0;
+        z-index: -2;
     }
     #list, #contact, .toolbar, .site-title { 
         padding-bottom: 20px;
+    }
+    .toolbar {
+        text-align: right;
     }
 }
 
