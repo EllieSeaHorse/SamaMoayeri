@@ -23,6 +23,13 @@ body {
     background-color: black;
     overflow: scroll;
 }
+/* .site-title {
+    border-left: 1px solid var(--milky);
+    border-top: 1px solid var(--milky);
+}
+#name {
+    padding: 5px;
+} */
 /* main {
     position: relative;
     display: grid;
@@ -67,9 +74,11 @@ footer{
     position: relative;
 }
 .footer {
-    opacity: 0.6;
+    opacity: 0.8;
+    filter: drop-shadow(1px 1px 2px #000000);
 
-    height: 20px;
+
+    height: 25px;
     margin: auto;
     text-align:center;
     color: var(--milky);
