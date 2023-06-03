@@ -63,11 +63,13 @@ p {
     text-justify: inter-word;
 }
 footer{
-    bottom: 0;
-    position: fixed;
+    width: 90%;
+    position: relative;
 }
 .footer {
-    height: 60px;
+    opacity: 0.6;
+
+    height: 20px;
     margin: auto;
     text-align:center;
     color: var(--milky);
