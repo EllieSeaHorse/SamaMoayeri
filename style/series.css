@@ -92,7 +92,6 @@ img {
     grid-row: span 2;
     grid-column:  span 2;
 }
-
 .next {
     grid-area: next;
     font-size: 0.6em;
@@ -114,13 +113,11 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-    main {
-
+    .main-series {
         width: 88%;
+        height: auto;
         padding: 6%;
-
         grid-template-columns: 1fr;
-    
         grid-template-rows:  fit-content fit-content fit-content fit-content ;
         grid-template-areas: "title"
                             "text"
