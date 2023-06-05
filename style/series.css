@@ -123,6 +123,8 @@ img {
 }
 
 .open-focus {
+    filter: blur(0px);
+
     filter: drop-shadow(rgb(35, 35, 35) 1px 1px 4px);
     display: block;
     animation: openImage 0.8s;
