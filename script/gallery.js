@@ -47,6 +47,9 @@ function openImage (id, all) {
     document.getElementById('bg-blur').style.display ='block';
     document.getElementById('close').style.display ='block';
     document.getElementById(id).classList.add('open-focus');
+    document.getElementById(id).classList.remove('open-sides2');
+    document.getElementById(id).classList.remove('open-sides1');
+
     document.getElementById(pre).classList.add('open-sides2');
     document.getElementById(next).classList.add('open-sides1');
 }
