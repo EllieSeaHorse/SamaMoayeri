@@ -19,6 +19,8 @@ function openImage (id, all) {
     let gallery = document.getElementById(all).children;
     let pre, next = 0;
 
+    closeAll (all);
+
     if (id==0) {
         pre = gallery.length-1;
         next = id+1;
@@ -37,13 +39,7 @@ function openImage (id, all) {
         console.log(pre);
 
     }
-    for (let i=0; i < gallery.length; i++) {
-        gallery[i].id = i ;
-        let photo = document.getElementById(gallery[i].id);
-        photo.classList.remove('open-focus');
-        photo.classList.remove('open-sides2');
-        photo.classList.remove('open-sides1');
-    }
+
     document.getElementById('bg-blur').style.display ='block';
     document.getElementById('close').style.display ='block';
     document.getElementById(id).classList.add('open-focus');
@@ -57,14 +53,12 @@ function openImage (id, all) {
 function closeAll (all) {
     let gallery = document.getElementById(all).children;
 
-
     for (let i=0; i < gallery.length; i++) {
         gallery[i].id = i ;
         let photo = document.getElementById(gallery[i].id);
         photo.classList.remove('open-focus');
         photo.classList.remove('open-sides2');
         photo.classList.remove('open-sides1');
-
     }
     document.getElementById('bg-blur').style.display ='none';
     document.getElementById('close').style.display ='none';

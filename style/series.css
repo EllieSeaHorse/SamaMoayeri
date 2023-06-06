@@ -123,7 +123,7 @@ img {
 }
 
 .open-focus {
-    filter: blur(0px);
+    filter: none ;
 
     filter: drop-shadow(rgb(35, 35, 35) 1px 1px 4px);
     display: block;
@@ -139,7 +139,6 @@ img {
     z-index: 20;
 }
 .open-sides1, .open-sides2 {
-    filter: blur(3px);
     opacity: 0.9;
     display: block;
     top: 20%;

@@ -1,17 +1,4 @@
-/* 
-nav{
-    display: flex;
-    justify-content: space-between;
-    margin: 4% 4%;
-    width: 92%;
-    height: 5%;
-    position:sticky;
-    flex-grow: 1;
-} */
 
-/* h3, p , h1, ul, h2{
-    color: var(--milky);
-} */
 :root {
     --blue: #93aac2;
     --lighter-blue: #c3d5e9;
@@ -24,10 +11,8 @@ nav{
 
     font-size: 30px;
     line-height: 30px; 
-
     grid-area: title;
     z-index: 10;
-
 
 }
 #name-title {

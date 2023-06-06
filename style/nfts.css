@@ -1,0 +1,99 @@
+
+:root {
+    --blue: #93aac2;
+    --lighter-blue: #c3d5e9;
+    --red:  #732929;
+    --lighter-red:  #c08c8c;
+    --dark-grey:  #131313;
+    --milky:  #e5dede;
+}
+.site-title {
+
+    font-size: 30px;
+    line-height: 30px; 
+    grid-area: title;
+    z-index: 10;
+}
+
+.main-nfts {
+    position: relative;
+    display: grid;
+    width: 92%;
+    height: min-content;
+    padding: 4%;
+    column-gap: 20px;
+    row-gap: 30px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "title header em" 
+                        "re header contact" 
+                        "market market market";
+
+}
+header {
+    grid-area: header;
+    border: 2px solid wheat;
+}
+.market-row {
+    grid-area: market;
+    overflow-x: scroll;
+    height: 2000px;
+}
+.inner-row {
+    display: grid;
+    overflow-y: visible;
+    overflow-x: hidden;
+
+    column-gap: 3px;
+    grid-template-columns: repeat(5, 1fr
+    );
+    grid-template-rows: fit-content;
+    /* justify-content: start; */
+    align-content: start;
+    flex-wrap: wrap;
+
+}
+.box {
+    margin: 10px;
+    min-width: 100px;
+    aspect-ratio: 3/4;
+    background-color: #93aac2;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+figcaption {
+    align-self: self-end;
+    font-size: 0.8em;
+    line-height: 1em;
+    padding: 5px;
+}
+.price {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#contact {
+    grid-area: contact;
+    display: grid;
+    position: relative;
+    /* font-size: 0.6em; */
+    text-align: right;
+}
+
+.title-row {
+    border: 1px solid var(--milky);
+}
+
+.title-row a {
+    font-weight: 400;
+    padding: 5px;
+}
+
+
+
