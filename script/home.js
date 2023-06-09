@@ -11,6 +11,13 @@ seriesBt.addEventListener('click', showSeries);
 contactBt.addEventListener('click', showContact);
 closeBt.addEventListener('click', hideAll);
 
+let series = document.getElementById('list').children;
+
+
+console.log(series);
+
+var activeNumber = 0 ;
+var length = 10 ;
 
 
 function showSeries(){
@@ -19,13 +26,10 @@ if (showingContact==true) {
 }
     let elem = document.getElementById('list');
     elem.style.animation= 'show 0.8s ease-in';
-    // bpImage.style.animation = 'imageHide 0.8s';
+
 
     setTimeout(()=>{document.getElementById('list').style.opacity='1';}, 800);
     setTimeout(()=>{document.getElementById('list').style.zIndex='5';}, 800);
-
-    // setTimeout(()=>{bpImage.style.right='-200%';}, 800);
-
 
     closeBt.style.display = 'block';
     seriesBt.style.fontWeight = '400';
@@ -39,20 +43,14 @@ function showContact(){
     }
     let elem = document.getElementById('contact');
     elem.style.animation= 'show 0.8s ease-in';
-    // bpImage.style.animation = 'imageHide 0.8s';
 
     setTimeout(()=>{document.getElementById('contact').style.opacity='1';}, 800);
     setTimeout(()=>{document.getElementById('contact').style.zIndex='5';}, 800);
-
-    // setTimeout(()=>{bpImage.style.right='-200%';}, 800);
-
 
     closeBt.style.display = 'block';
     contactBt.style.fontWeight = '400';
 
     showingContact = true;
-
-
 }
 
 function hideList (){
@@ -84,17 +82,11 @@ function hideAll() {
     if (showingContact==true) {
         hideContact();
     }
-    bpImage.style.animation = 'imageShow 0.8s';
+    // bpImage.style.animation = 'imageShow 0.8s';
     setTimeout(()=>{bpImage.style.right='0';}, 800);
 
 }
 
-
-var series = document.getElementById('list').children;
-console.log(series);
-
-var activeNumber = 0 ;
-var length = 10 ;
 
 
 function focusOn (number) {

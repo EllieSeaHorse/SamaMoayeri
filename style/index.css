@@ -32,11 +32,6 @@
 
 }
 #home-main {
-    /* position: relative;
-    display: grid;
-    width: 86%;
-    padding: 7%;
-    column-gap: 20px; */
 
     height: 86%;
     grid-template-columns: 3fr 2fr;
@@ -78,7 +73,7 @@
 #list, #contact {
     /* display: none; */
     grid-area: content;
-    align-self: self-end;
+    /* align-self: self-end; */
 
     font-size: 1.5em;
     line-height: 1em;
@@ -89,21 +84,28 @@
     text-align: left;
     z-index: -2;
     /* width: 40%; */
-    border-bottom: 1px solid var(--milky);
-    border-right: 1px solid var(--milky);
+    /* border-bottom: 1px solid var(--milky);
+    border-right: 1px solid var(--milky); */
     /* height: 0; */
     opacity: 0;
-
 }
+
 #list {
     text-transform: uppercase;
+}
+
+#list a {
+    opacity: 0;
+}
+#contact a:hover {
+    font-weight: 400;
 }
 
 #contact {
     padding-bottom: 5px;
 }
 #contact a {
-    padding: 0 20px 0 0;
+    /* padding: 0 20px 0 0; */
     display: flex;
     align-items: baseline;
     justify-content: space-between;
