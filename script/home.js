@@ -19,12 +19,12 @@ if (showingContact==true) {
 }
     let elem = document.getElementById('list');
     elem.style.animation= 'show 0.8s ease-in';
-    bpImage.style.animation = 'imageHide 0.8s';
+    // bpImage.style.animation = 'imageHide 0.8s';
 
     setTimeout(()=>{document.getElementById('list').style.opacity='1';}, 800);
     setTimeout(()=>{document.getElementById('list').style.zIndex='5';}, 800);
 
-    setTimeout(()=>{bpImage.style.right='-200%';}, 800);
+    // setTimeout(()=>{bpImage.style.right='-200%';}, 800);
 
 
     closeBt.style.display = 'block';
@@ -39,12 +39,12 @@ function showContact(){
     }
     let elem = document.getElementById('contact');
     elem.style.animation= 'show 0.8s ease-in';
-    bpImage.style.animation = 'imageHide 0.8s';
+    // bpImage.style.animation = 'imageHide 0.8s';
 
     setTimeout(()=>{document.getElementById('contact').style.opacity='1';}, 800);
     setTimeout(()=>{document.getElementById('contact').style.zIndex='5';}, 800);
 
-    setTimeout(()=>{bpImage.style.right='-200%';}, 800);
+    // setTimeout(()=>{bpImage.style.right='-200%';}, 800);
 
 
     closeBt.style.display = 'block';

@@ -8,20 +8,14 @@
     --milky:  #e5dede;
 }
 .site-title {
-
-    font-size: 30px;
-    line-height: 30px; 
-
     grid-area: title;
-    z-index: 10;
-
 }
 .main-series {
-    position: relative;
+    /* position: relative;
     display: grid;
     width: 92%;
     height: 90%;
-    padding: 4%;
+    padding: 4%; */
     column-gap: 20px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 10% 85% 5%;
@@ -172,9 +166,9 @@ img {
 
 @media screen and (max-width: 600px) {
     .main-series {
-        width: 88%;
+        /* width: 88%; */
         height: auto;
-        padding: 6%;
+        /* padding: 6%; */
         grid-template-columns: 1fr;
         /* grid-template-rows: 1fr 1fr 1fr 1fr; */
         grid-template-rows: repeat(4, min-content );

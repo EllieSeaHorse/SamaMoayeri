@@ -24,15 +24,9 @@
     line-height: 1em;
 }
 .main-resume {
-    position: relative;
-    display: grid;
-    width: 88%;
-    /* height: 90%; */
-    padding: 6%;
     column-gap: 20px;
     row-gap: 30px;
     grid-template-columns: 3fr 1fr 1fr;
-    /* grid-template-rows: min-content 200px repeat(3, min-content); */
     grid-template-areas: "title title photo"
                         "bio bio photo"
                         "content content content"
