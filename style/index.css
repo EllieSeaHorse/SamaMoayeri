@@ -12,11 +12,12 @@
 }
 #bpImage{
     z-index: -10;
-    filter: blur(10px);
+    filter: blur(6px);
     position: fixed;
     height: 100vh;
     right: 0;
 }
+
 #bpImage2{
     z-index: -10;
     filter: blur(5px);
@@ -34,7 +35,7 @@
 #home-main {
 
     height: 86%;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: "title em"
                         "text content"
                         "text content";
@@ -43,6 +44,21 @@
 .site-title {
 
     grid-area: title;
+
+}
+#copyright {
+    text-align: left;
+}
+#color-box {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 36%;
+
+    background-color: #4b2b2b;
+    mix-blend-mode: hard-light;
+    border-left: 2px solid var(--milky) ;
 
 }
 
@@ -57,7 +73,7 @@
     /* position: fixed;
     bottom: 30px;
     left: 30px; */
-    text-align: left;
+    text-align: right;
     /* display: block; */
     text-transform: uppercase;
     font-weight: 300;
@@ -97,9 +113,7 @@
 #list a {
     opacity: 0;
 }
-#contact a:hover {
-    font-weight: 400;
-}
+
 
 #contact {
     padding-bottom: 5px;
@@ -183,9 +197,22 @@
     .toolbar {
         text-align: right;
     }
-    .footer {
+    /* .footer {
         opacity: 0.9;
         color: #131313;
         filter: none;
+    } */
+    #color-box {
+        position: relative;
+        grid-area: content;
+        margin: -3.5% -10% -20%;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 120%;
+        border-top: 2px solid var(--milky) ;
+        overflow: hidden;
+
+
     }
 }

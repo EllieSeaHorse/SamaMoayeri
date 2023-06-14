@@ -25,11 +25,11 @@ if (showingContact==true) {
     hideContact();
 }
     let elem = document.getElementById('list');
-    elem.style.animation= 'show 0.8s ease-in';
+    elem.style.animation= 'show 0.3s ease-in';
 
 
-    setTimeout(()=>{document.getElementById('list').style.opacity='1';}, 800);
-    setTimeout(()=>{document.getElementById('list').style.zIndex='5';}, 800);
+    setTimeout(()=>{document.getElementById('list').style.opacity='1';}, 300);
+    setTimeout(()=>{document.getElementById('list').style.zIndex='5';}, 300);
 
     closeBt.style.display = 'block';
     seriesBt.style.fontWeight = '400';
@@ -42,10 +42,10 @@ function showContact(){
         hideList();
     }
     let elem = document.getElementById('contact');
-    elem.style.animation= 'show 0.8s ease-in';
+    elem.style.animation= 'show 0.3s ease-in';
 
-    setTimeout(()=>{document.getElementById('contact').style.opacity='1';}, 800);
-    setTimeout(()=>{document.getElementById('contact').style.zIndex='5';}, 800);
+    setTimeout(()=>{document.getElementById('contact').style.opacity='1';}, 300);
+    setTimeout(()=>{document.getElementById('contact').style.zIndex='5';}, 300);
 
     closeBt.style.display = 'block';
     contactBt.style.fontWeight = '400';
@@ -54,9 +54,9 @@ function showContact(){
 }
 
 function hideList (){
-    document.getElementById('list').style.animation= 'hide 0.8s ease-out';
-    setTimeout(()=>{document.getElementById('list').style.opacity='0';}, 800);
-    setTimeout(()=>{document.getElementById('list').style.zIndex='-2';}, 800);
+    document.getElementById('list').style.animation= 'hide 0.3s ease-out';
+    setTimeout(()=>{document.getElementById('list').style.opacity='0';}, 300);
+    setTimeout(()=>{document.getElementById('list').style.zIndex='-2';}, 300);
 
     closeBt.style.display = 'none';
     seriesBt.style.fontWeight = '300';
@@ -65,9 +65,9 @@ function hideList (){
 
 }
 function hideContact () {
-    document.getElementById('contact').style.animation= 'hide 0.8s ease-out';
-    setTimeout(()=>{document.getElementById('contact').style.opacity='0';}, 800);
-    setTimeout(()=>{document.getElementById('contact').style.zIndex='-2';}, 800);
+    document.getElementById('contact').style.animation= 'hide 0.3s ease-out';
+    setTimeout(()=>{document.getElementById('contact').style.opacity='0';}, 300);
+    setTimeout(()=>{document.getElementById('contact').style.zIndex='-2';}, 300);
 
     closeBt.style.display = 'none';
     contactBt.style.fontWeight = '300';
@@ -83,7 +83,7 @@ function hideAll() {
         hideContact();
     }
     // bpImage.style.animation = 'imageShow 0.8s';
-    setTimeout(()=>{bpImage.style.right='0';}, 800);
+    setTimeout(()=>{bpImage.style.right='0';}, 300);
 
 }
 
@@ -106,6 +106,8 @@ function focusOn (number) {
     for (let item=0; item<length; item++) {
         // document.getElementById(series[item].id).style.fontSize = "1.1em";
         document.getElementById(series[item].id).style.opacity = "0.6";
+        document.getElementById(series[item].id).style.fontWeight = '300';
+
     }
 
 
@@ -116,26 +118,39 @@ function focusOn (number) {
 
         // elem.style.fontSize = "1.4em";
         elem.style.opacity = "1";
+        elem.style.fontWeight = '400';
         // elem1.style.fontSize = "1.2em";
         elem1.style.opacity = "0.8";
+        elem1.style.fontWeight = '300';
+
         // elem2.style.fontSize = "1.2em";
         elem2.style.opacity = "0.8";
+        elem2.style.fontWeight = '300';
+
     }
     else if (number==0) {
         let elem2 = document.getElementById(series[(number+1)].id)
 
         // elem.style.fontSize = "1.4em";
         elem.style.opacity = "1";
+        elem.style.fontWeight = '400';
+
         // elem2.style.fontSize = "1.2em";
         elem2.style.opacity = "0.8";
+        elem2.style.fontWeight = '300';
+
     }
     else if (number == length-1) {
         let elem1 = document.getElementById(series[(number-1)].id)
 
         // elem.style.fontSize = "1.4em";
         elem.style.opacity = "1";
+        elem.style.fontWeight = '400';
+
         // elem1.style.fontSize = "1.2em";
         elem1.style.opacity = "0.8";
+        elem1.style.fontWeight = '300';
+
     }
 
 }

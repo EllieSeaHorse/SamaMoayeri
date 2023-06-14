@@ -11,6 +11,8 @@ function createGallery(all) {
     for (let i=0; i < gallery.length; i++) {
         gallery[i].id = i ;
         let photo = document.getElementById(gallery[i].id);
+        console.log(gallery[i]);
+
         photo.addEventListener('click', function() { openImage(i, all )}  );
     }
 
@@ -24,20 +26,15 @@ function openImage (id, all) {
     if (id==0) {
         pre = gallery.length-1;
         next = id+1;
-        // console.log(pre);
-
     }
     else if (id==gallery.length-1) {
         next = 0;
         pre = id-1;
-        console.log(next);
     }
     
     else {
         pre = id-1;
         next = id+1;
-        console.log(pre);
-
     }
 
     document.getElementById('bg-blur').style.display ='block';

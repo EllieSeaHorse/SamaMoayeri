@@ -8,12 +8,7 @@
     --milky:  #e5dede;
 }
 .site-title {
-
-    font-size: 30px;
-    line-height: 30px; 
     grid-area: title;
-    z-index: 10;
-
 }
 #name-title {
     display: flex;
@@ -48,7 +43,7 @@
 
     grid-area: photo;
     /* display: inline-block; */
-    border: 3px dashed var(--milky);
+    border: 2px dashed var(--milky);
     /* border-radius: 50%; */
     overflow: hidden;
     aspect-ratio: 1/1;
@@ -72,13 +67,14 @@
 .content {
     display: block;
     grid-area: content;
-    padding-top: 10px;
+    /* padding-top: 10px; */
 
 }
 .content .part {
     display: grid;
     grid-template-columns: 2fr 6fr;
-    gap: 20px 10px;
+    gap: 20px 30px;
+    /* border-top: 1px solid var(--milky); */
     grid-template-areas: "name text" ;
     grid-template-rows: repeat(4, min-content);
 }
@@ -103,6 +99,8 @@
 }
 
 .title-year {
+    padding-top: 15px;
+
     grid-area: text;
     display: flex;
     justify-content: space-between;
@@ -110,19 +108,21 @@
     line-height: 0.9em;
 }
 .year {
-    border: 1px dotted white;
     font-weight: bold;
     font-size: 0.8em;
     padding: 2px 5px;
 }
 .explain {
-    padding-top: 10px;
+    /* padding-top: 10px; */
+
     font-size: 1em;
     font-weight: 400;
 }
 
 
 .g-content {
+    border-top: 2px solid var(--milky);
+
     display: block;
 }
 .responsiilities {

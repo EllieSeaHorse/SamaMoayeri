@@ -7,6 +7,13 @@
     --dark-grey:  #131313;
     --milky:  #e5dede;
 }
+#bpImage{
+    z-index: -10;
+    filter: blur(10px);
+    position: fixed;
+    height: 100vh;
+    right: 0;
+}
 .site-title {
     grid-area: title;
 }
@@ -16,11 +23,11 @@
     row-gap: 30px;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "title header em" 
-                        "re header contact" 
-                        "market market market";
+                        "market market owned"
+                        "re contact k" ;
 
 }
-.cne {
+/* .cne {
     grid-area: em;
     border-top: 2px solid var(--milky);
     border-left: 2px solid var(--milky);
@@ -29,12 +36,19 @@
     grid-area: re;
     border-left: 2px solid var(--milky);
     border-bottom: 2px solid var(--milky);
-}
+} */
 header {
     grid-area: header;
     /* border-top: 2px solid var(--milky);
     border-bottom: 2px solid var(--milky); */
 
+}
+.owned {
+    grid-area: owned;
+    border: 2px solid var(--milky);
+}
+.owned .box {
+    padding: 10px;
 }
 .market-row {
     grid-area: market;
@@ -47,7 +61,7 @@ header {
     overflow-y: visible;
     overflow-x: hidden;
     column-gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: fit-content;
     /* justify-content: start; */
     align-content: start;
@@ -55,11 +69,13 @@ header {
 }
 
 .box {
-    min-width: 100px;
-    aspect-ratio: 4/3;
-    /* background-color: var(--lighter-blue); */
+    /* min-width: 100px; */
+    aspect-ratio: 3/1;
+    /* background-color:rgb(41, 41, 41); */
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
     border: 1px dashed var(--milky);
 
 }
@@ -68,11 +84,15 @@ header {
 }
 
 figcaption {
+
+    grid-column: 1/1;
+    grid-row: 1/1;
+
     color: var(--milky);
     align-self: self-end;
     font-size: 0.8em;
     line-height: 1em;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .price {
@@ -81,9 +101,11 @@ figcaption {
 }
 
 img {
+    grid-column: 1/1;
+    grid-row: 1/1;
     filter: drop-shadow(rgb(133, 133, 133) 0px 1px 2px);
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 #contact {
     grid-area: contact;
@@ -102,6 +124,7 @@ img {
     
 }
 #contact a {
+    line-height: 1em;
     display: flex;
     align-items: baseline;
     justify-content: space-between;

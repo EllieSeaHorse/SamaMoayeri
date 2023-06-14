@@ -35,8 +35,8 @@ main {
 }
 
 .site-title {
-    font-size: 30px;
-    line-height: 30px; 
+    font-size: 35px;
+    line-height: 35px; 
     z-index: 10;
 }
 #name h3 {
@@ -49,7 +49,7 @@ p {
     text-justify: inter-word;
 }
 footer{
-    width: 90%;
+    width: 86%;
     position: relative;
 }
 .footer {
@@ -116,6 +116,9 @@ p {
 }
 #twitter:active, #twitter:hover {
     color: #00acee;
+}
+#contact a:hover {
+    font-weight: 400;
 }
 
 /* @media screen and (max-width: 600px) {
