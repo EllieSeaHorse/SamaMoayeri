@@ -12,7 +12,7 @@
 }
 #bpImage{
     z-index: -10;
-    filter: blur(6px);
+    filter: blur(20px);
     position: fixed;
     height: 100vh;
     right: 0;
@@ -34,18 +34,36 @@
 }
 #home-main {
 
-    height: 86%;
-    grid-template-columns: 2fr 1fr;
+    /* height: 86%; */
+    grid-template-columns: 4fr 1fr ;
+    row-gap: 40px;
     grid-template-areas: "title em"
-                        "text content"
-                        "text content";
+                        "content text"
+                        "content text"
+                        "ex ex";
  
 }
 .site-title {
 
     grid-area: title;
 
+
 }
+
+#name {
+    font-size: 10vw;
+    line-height: 9vw;
+
+    /* width: fit-content; */
+    /* block-size: fit-content; */
+    text-align: left;
+    /* text-align-last: justify; */
+    text-justify: inter-word;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+
 #copyright {
     text-align: left;
 }
@@ -54,7 +72,7 @@
     bottom: 0;
     top: 0;
     right: 0;
-    width: 36%;
+    width: 26%;
 
     background-color: #4b2b2b;
     mix-blend-mode: hard-light;
@@ -73,7 +91,7 @@
     /* position: fixed;
     bottom: 30px;
     left: 30px; */
-    text-align: right;
+    text-align: left;
     /* display: block; */
     text-transform: uppercase;
     font-weight: 300;
@@ -84,9 +102,34 @@
     font-weight: 400;
 }
 
+#exhibit {
+    z-index: 40;
+    align-self: center;
+    grid-area: ex;
 
+}
+#exhibit img {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 90%;
+}
+#exhibit a {
+    /* display: grid; */
+
+}
+#exhibit h3 {
+    grid-column: 1/1;
+    width: 90%;
+    font-size: 0.7em;
+    grid-row: 1/1;
+    align-self: self-end;
+    text-align: center;
+
+}
 
 #list, #contact {
+    align-self: self-end;
+
     /* display: none; */
     grid-area: content;
     /* align-self: self-end; */
@@ -117,6 +160,7 @@
 
 #contact {
     padding-bottom: 5px;
+    width: 40%;
 }
 #contact a {
     /* padding: 0 20px 0 0; */
@@ -127,6 +171,7 @@
 }
 #contact i {
     font-size: 0.8em;
+    display: none;
 }
 
 @keyframes show {

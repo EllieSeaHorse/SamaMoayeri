@@ -1,0 +1,83 @@
+
+:root {
+    --blue: #93aac2;
+    --lighter-blue: #c3d5e9;
+    --red:  #732929;
+    --lighter-red:  #c08c8c;
+    --dark-grey:  #131313;
+    --milky:  #e5dede;
+}
+
+#fragments-main {
+
+    /* column-gap: 20px; */
+    row-gap: 30px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content 5%;
+    grid-template-areas: "title" 
+                        "text "
+                        "content"
+                        "next";
+
+}
+.site-title {
+    grid-area: title;
+    /* width: 100%; */
+    padding: 3% 0;
+}
+#name {
+    font-size: 10vw;
+    width: fit-content;
+    block-size: fit-content;
+    text-align: right;
+    text-align-last: justify; 
+    text-justify: inter-word;
+    text-transform: uppercase;
+
+}
+.content {
+    grid-area: content;
+}
+
+section {
+    display: grid;
+    column-gap: 10px;
+    margin-top: 20px;
+    row-gap: 10px;
+    padding-bottom: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "photo photo number"
+                        "ke text text";
+}
+.number {
+    grid-area: number;
+    font-size: 10vw;
+    text-align: right;
+    padding: 0;
+    border-top: 2px solid var(--milky);
+}
+
+figure {
+    grid-area: photo;
+}
+figcaption {
+    grid-area: text;
+}
+
+figure img {
+    width: 100%;
+    object-fit: contain;
+}
+#episodes {
+    position: fixed;
+    color: var(--lighter-red);
+    padding-top: 20px;
+    padding: 5px;
+    border: #93aac2;
+    font-size: 2em;
+    z-index: 30;
+}
+h1 {
+    color: var(--lighter-red);
+}

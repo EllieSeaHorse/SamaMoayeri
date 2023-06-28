@@ -10,10 +10,8 @@
 .site-title {
     grid-area: title;
     width: 100%;
-    padding: 10% 0;
+    padding: 6% 0;
     border-left: 2px solid var(--milky);
-
-
 
 }
 #name {
@@ -34,7 +32,7 @@ text-transform: uppercase;
     grid-template-rows: min-content min-content min-content 5%;
     grid-template-areas: "title" 
                         "text"
-                        "content "
+                        "content"
                         "next ";
 }
 .statement {
@@ -42,10 +40,14 @@ text-transform: uppercase;
     font-weight: 300;
     text-align: left;
     z-index: 3;
+    border-right: 2px solid var(--milky);
+
 
 }
 .statement p {
     font-size: 1em;
+    line-height: 1.2em;
+    margin: 0% 6% 3% 0;
 }
 
 .photos {
@@ -73,10 +75,9 @@ figure a {
     grid-column: 1/1;
     grid-row: 1/1;
     align-self: self-end;
-    font-size: 0.7em;
-    padding: 10px;
+    font-size: 0.6em;
+    padding: 6px;
 }
-
 
 
 .video {
@@ -151,22 +152,21 @@ img {
     filter: drop-shadow(rgb(35, 35, 35) 1px 1px 4px);
     /* display: block; */
     animation: openImage 0.8s;
-    top: 10%;
-    left: 17.5%;
+    top: 15%;
+    left: 15%;
     position: fixed;
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
-    height: 65%;
+    /* height: 65%; */
     z-index: 20;
 }
 .open-focus a{ 
     display: block;
 
-    font-size: 1em;
+    font-size: 0.6em;
     font-weight: 400;
-    text-align: center;
-    color: var(--milky);
-    mix-blend-mode: hard-light;
+    text-align: left;
+    color: var(--lighter-blue);
 }
 
 .open-sides1, .open-sides2 {
