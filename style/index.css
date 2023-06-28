@@ -40,7 +40,7 @@
     grid-template-areas: "title em"
                         "content text"
                         "content text"
-                        "ex ex";
+                        ;
  
 }
 .site-title {
@@ -51,8 +51,8 @@
 }
 
 #name {
-    font-size: 9vw;
-    line-height: 9vw;
+    font-size: 8vw;
+    line-height: 8vw;
 
     /* width: fit-content; */
     /* block-size: fit-content; */
